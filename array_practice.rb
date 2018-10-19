@@ -48,3 +48,20 @@ sum = numbers.inject(0){|result, n| result + n } # 足し算
 puts sum
 product = numbers.inject(1){|result, n| result * n } # 掛け算
 puts product
+
+# <<その他>>
+# 配列[位置,取得する長さ]
+numbers[1,3] # =>[2,3,4]
+
+# 配列[-1] ⇒ 最後の要素が取得出来る
+numbers[-1] # =>[6]
+# これでも可能 ⇒ 配列[配列の長さ-1]
+numbers[numbers.size - 1]
+
+# <配列の連結>
+numbers_1 = [7,8,9,10]
+numbers.concat(numbers_1) # concatメソッドを使う(破壊的メソッド)
+# 元を変更したくなければ↓
+numbers = [1,2,3,4,5,6]
+puts numbers + numbers_1　# このように行うのがおすすめ
+
